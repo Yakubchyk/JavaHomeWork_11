@@ -5,9 +5,7 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) {
-        String inputFileName = "src/com/yk1/romeo_julietta/romeo-and-juliet.txt";
-
-        try (FileReader fr = new FileReader(inputFileName)) {
+        try (FileReader fr = new FileReader("src/com/yk1/romeo_julietta/romeo-and-juliet.txt")) {
             StringBuilder line = new StringBuilder();
             String longWord = "";
             int i;
