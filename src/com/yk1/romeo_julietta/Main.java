@@ -1,11 +1,13 @@
 package com.yk1.romeo_julietta;
 
 import java.io.*;
+import java.util.Arrays;
 
 
 public class Main {
     public static void main(String[] args) {
-        try (FileReader fr = new FileReader("src/com/yk1/romeo_julietta/romeo-and-juliet.txt")) {
+        File fileRead = new File("src/com/yk1/romeo_julietta/romeo-and-juliet.txt");
+        try (FileReader fr = new FileReader(fileRead)) {
             StringBuilder line = new StringBuilder();
             String longWord = "";
             int i;
@@ -21,11 +23,11 @@ public class Main {
                 }
             }
 
-            File file = new File("src/com/yk1/romeo_julietta/longword.txt");
-            FileOutputStream fos = new FileOutputStream(file);
+            File fileWrit = new File("src/com/yk1/romeo_julietta/longword.txt");
+            FileWriter fw = new FileWriter(fileWrit);
             String content = longWord;
-            fos.write(content.getBytes());
-            fos.close();
+            fw.write(Arrays.toString(content.getBytes()));
+            fw.close();
             System.out.println("Самое длинное слово в файле: " + longWord);
 
         } catch (IOException e) {
