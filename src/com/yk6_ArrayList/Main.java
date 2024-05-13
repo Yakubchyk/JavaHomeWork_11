@@ -19,6 +19,13 @@ public class Main {
         System.out.println(customArrayList);
         customArrayList.add(1500);
 
+        System.out.println(customArrayList);
+
+        customArrayList.delete(2);
+        customArrayList.clear();
+
+        System.out.println(customArrayList);
+
     }
 }
 

@@ -59,7 +59,6 @@ public class CustomArrayList<T> {
             if (item.equals(list[i])) {
                 return i;
             }
-
         }
         return -1;
     }
@@ -79,5 +78,11 @@ public class CustomArrayList<T> {
     @Override
     public String toString() {
         return Arrays.toString(Arrays.copyOf(list, size));
+    }
+
+    public void  clear() {
+        for (int i = 0; i < size; i++) {
+            list[i] = null;
+        }
     }
 }
