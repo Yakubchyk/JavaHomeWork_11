@@ -1,10 +1,27 @@
 package com.yk6_ArrayList;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
+        CustomArrayList<Integer> customArrayList = new CustomArrayList<>();
+        customArrayList.add(1);
+        customArrayList.add(2);
+        customArrayList.add(3);
+
+        customArrayList.delete(2);
+        System.out.println(customArrayList);
+        customArrayList.add(2, 567);
+        System.out.println(customArrayList);
+        customArrayList.setList(3, 1000);
+        System.out.println(customArrayList);
+        customArrayList.add(1500);
+
     }
 }
+
 /*
 Задача *:
 Представим, что в Java нет коллекции типа ArrayList. Создать свой класс, симулирующий
